@@ -10,23 +10,30 @@ public class SP_PlayerController : MonoBehaviour
     /// TO DO
     /// Turn system
     /// </summary>
-    public int state = 0;
+    public int state;
 
     public Text diceText;
+    public GameObject dice;
 
     public GameObject previousSpace;
     public GameObject currentSpace;
     public GameObject destination;
 
-    public GameObject dice;
+    public GameObject gameManager;
     public int moves;
+
+    void Start()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+        state = -1;
+    }
 
     void Update()
     {
         switch (state)
         {
             case -1: //Not This Player's Turn
-
+                Debug.Log("State -1");
                 break;
 
             case 0: //Idle (waiting for roll)
@@ -34,7 +41,6 @@ public class SP_PlayerController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     moves = dice.GetComponent<SP_DiceRoll>().RollDice();
-                    previousSpace = null;   //IS THIS OK?
                     state = 1;
                 }
                 break;
@@ -56,7 +62,7 @@ public class SP_PlayerController : MonoBehaviour
         }
 
         transform.position = currentSpace.transform.position;
-        diceText.text = moves.ToString();
+        //diceText.text = moves.ToString();
 
     }
 
@@ -119,11 +125,13 @@ public class SP_PlayerController : MonoBehaviour
             previousSpace = currentSpace;
             currentSpace = destination;
             moves--;
-            state = 0;
+            state = -1; //ends player's turn when moves run out
+            gameManager.GetComponent<SP_GameManager>().NextPlayer();
         }
         else
         {
             state = -1; //ends player's turn when moves run out
+            gameManager.GetComponent<SP_GameManager>().NextPlayer();
         }
     }
 
