@@ -8,7 +8,7 @@ public class SP_PlayerController : MonoBehaviour
 
     /// <summary>
     /// TO DO
-    /// Remove 'previous space' at beginning of turn
+    /// Turn system
     /// </summary>
     public int state = 0;
 
@@ -20,19 +20,21 @@ public class SP_PlayerController : MonoBehaviour
 
     public GameObject dice;
     public int moves;
-    public bool startOfTurn;
 
     void Update()
     {
-
         switch (state)
         {
+            case -1: //Not This Player's Turn
+
+                break;
+
             case 0: //Idle (waiting for roll)
                 Debug.Log("State 0");
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     moves = dice.GetComponent<SP_DiceRoll>().RollDice();
-                    startOfTurn = true;
+                    previousSpace = null;   //IS THIS OK?
                     state = 1;
                 }
                 break;
@@ -60,46 +62,47 @@ public class SP_PlayerController : MonoBehaviour
 
     void SelectDirection()
     {
-        for (int i = 0; i < currentSpace.transform.childCount; i++)
+        for (int i = 1; i < currentSpace.transform.childCount; i++)
         {
             currentSpace.transform.GetChild(i).gameObject.SetActive(true);
         }
 
-            for (int i = 0; i < currentSpace.transform.childCount; i++)
+        for (int i = 1; i < currentSpace.transform.childCount; i++)                 //for loop only ignores child with index 0, meaning the model must be at index 0
+        {
+            if (currentSpace.transform.GetChild(i).gameObject.GetComponent<SP_Pointer>().pointedNode == previousSpace)   //determines which pointer points to the previous space
             {
-                if (currentSpace.transform.GetChild(i).gameObject.GetComponent<SP_Pointer>().pointedNode == previousSpace)   //determines which pointer points to the previous space
-                {
-                    currentSpace.transform.GetChild(i).gameObject.SetActive(false);                                             //disables it
-                }
+                currentSpace.transform.GetChild(i).gameObject.SetActive(false);                                             //disables it
             }
 
-            //activate pointers for player input
+        }
+
+        //activate pointers for player input
 
 
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
 
-            //Choose Direction
-            if (Input.GetMouseButtonDown(0))
+        //Choose Direction
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Physics.Raycast(ray, out hit))
             {
-                if (Physics.Raycast(ray, out hit))
+                if (hit.transform.gameObject.tag == "Pointer")
                 {
-                    if (hit.transform.gameObject.tag == "Pointer")
+                    Debug.Log("Player has clicked " + hit.transform.gameObject.name);
+
+                    for (int i = 1; i < currentSpace.transform.childCount; i++)
                     {
-                        Debug.Log("Player has clicked " + hit.transform.gameObject.name);
-
-                        for (int i = 0; i < currentSpace.transform.childCount; i++)
-                        {
-                            currentSpace.transform.GetChild(i).gameObject.SetActive(false);
-                        }
-
-                        destination = hit.transform.gameObject.GetComponent<SP_Pointer>().pointedNode;
-
-                        state = 2;
+                        currentSpace.transform.GetChild(i).gameObject.SetActive(false);
                     }
+
+                    destination = hit.transform.gameObject.GetComponent<SP_Pointer>().pointedNode;
+
+                    state = 2;
                 }
             }
+        }
     }
 
     void MovePlayer()
@@ -120,33 +123,34 @@ public class SP_PlayerController : MonoBehaviour
         }
         else
         {
-            state = 0;  //return state to idle once moves have run out
+            state = -1; //ends player's turn when moves run out
         }
-        startOfTurn = false;
     }
 
     void DetermineDestination()
     {
-        if (!currentSpace.GetComponent<SP_NodeScript>().isFork)
+
+
+        if (!currentSpace.GetComponent<SP_NodeScript>().isFork) //if this isn't a fork, determine the next space
         {
-            if (currentSpace.GetComponent<SP_NodeScript>().nextSpace1 == previousSpace)
+
+            if (currentSpace.transform.Find("Pointer (0)").GetComponent<SP_Pointer>().pointedNode == previousSpace)
             {
-                destination = currentSpace.GetComponent<SP_NodeScript>().nextSpace2;
+                destination = currentSpace.transform.Find("Pointer (1)").GetComponent<SP_Pointer>().pointedNode;
             }
-            else if (currentSpace.GetComponent<SP_NodeScript>().nextSpace2 == previousSpace)
+            else if (currentSpace.transform.Find("Pointer (1)").GetComponent<SP_Pointer>().pointedNode == previousSpace)
             {
-                destination = currentSpace.GetComponent<SP_NodeScript>().nextSpace1;
+                destination = currentSpace.transform.Find("Pointer (0)").GetComponent<SP_Pointer>().pointedNode;
             }
             else
             {
-                Debug.LogError("CANNOT DETERMINE NEXT SPACE");
+                Debug.LogError("Cannot Determine Next Space");
             }
-
             state = 2;
         }
-        else
+        else                    //if it is a fork, promt the player to choose a direction
         {
-            state = 1;
+            state = 1;          
         }
     }
 }
