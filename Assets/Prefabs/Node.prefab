@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4329862597644461999}
   m_Layer: 0
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFork: 0
+  isKeySpawn: 0
+  isItemSpawn: 0
   nextSpace1: {fileID: 0}
   nextSpace2: {fileID: 0}
   nextSpace3: {fileID: 0}
@@ -150,6 +152,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5408507008612939932}
     m_Modifications:
+    - target: {fileID: 3383813975158317662, guid: 606f761fcdbe59549a9c701b6718679f,
+        type: 3}
+      propertyPath: m_Name
+      value: Pointer (0)
+      objectReference: {fileID: 0}
     - target: {fileID: 5478838172948329316, guid: 606f761fcdbe59549a9c701b6718679f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -205,11 +212,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3383813975158317662, guid: 606f761fcdbe59549a9c701b6718679f,
-        type: 3}
-      propertyPath: m_Name
-      value: Pointer (0)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 606f761fcdbe59549a9c701b6718679f, type: 3}
 --- !u!4 &8276694850557020302 stripped
@@ -225,6 +227,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5408507008612939932}
     m_Modifications:
+    - target: {fileID: 3383813975158317662, guid: 606f761fcdbe59549a9c701b6718679f,
+        type: 3}
+      propertyPath: m_Name
+      value: Pointer (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5478838172948329316, guid: 606f761fcdbe59549a9c701b6718679f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,11 +286,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3383813975158317662, guid: 606f761fcdbe59549a9c701b6718679f,
-        type: 3}
-      propertyPath: m_Name
-      value: Pointer (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 606f761fcdbe59549a9c701b6718679f, type: 3}

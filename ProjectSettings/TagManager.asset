@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pointer
   - GameManager
+  - Node
   layers:
   - Default
   - TransparentFX

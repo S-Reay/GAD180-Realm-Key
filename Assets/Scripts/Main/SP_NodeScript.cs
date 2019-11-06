@@ -5,6 +5,8 @@ using UnityEngine;
 public class SP_NodeScript : MonoBehaviour
 {
     public bool isFork;
+    public bool isKeySpawn;
+    public bool isItemSpawn;
 
     public GameObject nextSpace1;
     public GameObject nextSpace2;
