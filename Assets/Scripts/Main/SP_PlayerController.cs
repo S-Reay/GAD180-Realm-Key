@@ -26,7 +26,7 @@ public class SP_PlayerController : MonoBehaviour
     public int keys;
 
     public bool holdingKey;
-    public bool holdingItem;
+    public GameObject holdingItem;
 
     void Start()
     {
@@ -198,11 +198,25 @@ public class SP_PlayerController : MonoBehaviour
             currentSpace.GetComponent<SP_NodeScript>().heldKey = null;
             holdingKey = true;
         }
-        else if (currentSpace.GetComponent<SP_NodeScript>().heldItem != null && !holdingItem)
+        else if (currentSpace.GetComponent<SP_NodeScript>().heldItem != null && holdingItem == null)    //If the space has an item but the player isn't holding one
         {
-            Destroy(currentSpace.GetComponent<SP_NodeScript>().heldItem);
+            switch (currentSpace.GetComponent<SP_NodeScript>().heldItem.tag)
+            {
+                case "Stun":
+                    holdingItem = currentSpace.GetComponent<SP_NodeScript>().heldItem;
+                    break;
+                case "TripleDice":
+                    holdingItem = currentSpace.GetComponent<SP_NodeScript>().heldItem;
+                    break;
+                case "RiggedDice":
+                    holdingItem = currentSpace.GetComponent<SP_NodeScript>().heldItem;
+                    break;
+                default:
+                    break;
+            }
+
+            Destroy(currentSpace.GetComponent<SP_NodeScript>().heldItem);           //ISSUE: Destroying gameobject removes it from player's inventory, possible solution: Store items in inventory as Int not GameObject
             currentSpace.GetComponent<SP_NodeScript>().heldItem = null;
-            holdingItem = true;
         }
         else if (team == currentSpace.GetComponent<SP_NodeScript>().team && holdingKey)
         {
