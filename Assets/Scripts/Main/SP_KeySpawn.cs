@@ -19,11 +19,14 @@ public class SP_KeySpawn : MonoBehaviour
     }
 
 
-    void SpawnKey()
+    public void SpawnKey()
     {
         int whichSpace = Random.Range(0, keySpawns.Count);
 
-        Instantiate(key, keySpawns[whichSpace].transform.position, transform.rotation);
+        if (keySpawns[whichSpace].gameObject.GetComponent<SP_NodeScript>().heldKey == null && !keySpawns[whichSpace].gameObject.GetComponent<SP_NodeScript>().isOccupied)   //Checks if the chosen spawn point already has a key or player
+        {
+            keySpawns[whichSpace].gameObject.GetComponent<SP_NodeScript>().heldKey = Instantiate(key, keySpawns[whichSpace].transform.position, transform.rotation);        //Spawns a key in the chosen spawn point if it is empty
+        }  
     }
 
     void Update()

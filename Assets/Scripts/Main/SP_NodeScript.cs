@@ -6,7 +6,17 @@ public class SP_NodeScript : MonoBehaviour
 {
     public bool isFork;
     public bool isKeySpawn;
-    public bool isItemSpawn;
+    public bool isOccupied;
+    public int  team;
+    /* Teams:
+     * 0 - None
+     * 1 - Red (Player 1)
+     * 2 - Blue (Player 2)
+     * 3 - Green (Player 3)
+     * 4 - Yellow (Player 4)
+     */
+    public GameObject heldItem;
+    public GameObject heldKey;
 
     public GameObject nextSpace1;
     public GameObject nextSpace2;
@@ -19,6 +29,9 @@ public class SP_NodeScript : MonoBehaviour
         {
             nextSpace3 = null;
         }
+        heldItem = null;
+        heldKey = null;
+        isOccupied = false;
     }
 
     public GameObject DetermineNextSpace(GameObject previousSpace)

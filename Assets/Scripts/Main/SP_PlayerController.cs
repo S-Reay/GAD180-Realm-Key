@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class SP_PlayerController : MonoBehaviour
 {
-
-    /// <summary>
-    /// TO DO
-    /// Turn system
-    /// </summary>
     public int state;
-
+    public int team;
+    /* Teams:
+    * 0 - None
+    * 1 - Red (Player 1)
+    * 2 - Blue (Player 2)
+    * 3 - Green (Player 3)
+    * 4 - Yellow (Player 4)
+    */
     public Text diceText;
     public GameObject dice;
 
@@ -21,18 +23,42 @@ public class SP_PlayerController : MonoBehaviour
 
     public GameObject gameManager;
     public int moves;
+    public int keys;
+
+    public bool holdingKey;
+    public bool holdingItem;
 
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
         state = -1;
+        moves = 0;
+        keys = 0;
+
+        switch (gameObject.name)
+        {
+            case "Player 1":
+                team = 1;
+                break;
+            case "Player 2":
+                team = 2;
+                break;
+            case "Player 3":
+                team = 3;
+                break;
+            case "Player 4":
+                team = 4;
+                break;
+            default:
+                break;
+        }
     }
 
     void Update()
     {
         switch (state)
         {
-            case -1: //Not This Player's Turn
+            case -1: //Innactive (Not This Player's Turn)
                 Debug.Log("State -1");
                 break;
 
@@ -41,6 +67,7 @@ public class SP_PlayerController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     moves = dice.GetComponent<SP_DiceRoll>().RollDice();
+                    currentSpace.GetComponent<SP_NodeScript>().isOccupied = false;
                     state = 1;
                 }
                 break;
@@ -62,7 +89,6 @@ public class SP_PlayerController : MonoBehaviour
         }
 
         transform.position = currentSpace.transform.position;
-        //diceText.text = moves.ToString();
 
     }
 
@@ -73,11 +99,11 @@ public class SP_PlayerController : MonoBehaviour
             currentSpace.transform.GetChild(i).gameObject.SetActive(true);
         }
 
-        for (int i = 1; i < currentSpace.transform.childCount; i++)                 //for loop only ignores child with index 0, meaning the model must be at index 0
+        for (int i = 1; i < currentSpace.transform.childCount; i++)                                                     //for loop only ignores child with index 0, meaning the model must be at index 0
         {
-            if (currentSpace.transform.GetChild(i).gameObject.GetComponent<SP_Pointer>().pointedNode == previousSpace)   //determines which pointer points to the previous space
+            if (currentSpace.transform.GetChild(i).gameObject.GetComponent<SP_Pointer>().pointedNode == previousSpace)  //determines which pointer points to the previous space
             {
-                currentSpace.transform.GetChild(i).gameObject.SetActive(false);                                             //disables it
+                currentSpace.transform.GetChild(i).gameObject.SetActive(false);                                         //disables it
             }
 
         }
@@ -125,6 +151,8 @@ public class SP_PlayerController : MonoBehaviour
             previousSpace = currentSpace;
             currentSpace = destination;
             moves--;
+            CheckSpace();
+            currentSpace.GetComponent<SP_NodeScript>().isOccupied = true;
             state = -1; //ends player's turn when moves run out
             gameManager.GetComponent<SP_GameManager>().NextPlayer();
         }
@@ -159,6 +187,28 @@ public class SP_PlayerController : MonoBehaviour
         else                    //if it is a fork, promt the player to choose a direction
         {
             state = 1;          
+        }
+    }
+
+    void CheckSpace()
+    {
+        if (currentSpace.GetComponent<SP_NodeScript>().heldKey != null && !holdingKey)
+        {
+            Destroy(currentSpace.GetComponent<SP_NodeScript>().heldKey);
+            currentSpace.GetComponent<SP_NodeScript>().heldKey = null;
+            holdingKey = true;
+        }
+        else if (currentSpace.GetComponent<SP_NodeScript>().heldItem != null && !holdingItem)
+        {
+            Destroy(currentSpace.GetComponent<SP_NodeScript>().heldItem);
+            currentSpace.GetComponent<SP_NodeScript>().heldItem = null;
+            holdingItem = true;
+        }
+        else if (team == currentSpace.GetComponent<SP_NodeScript>().team && holdingKey)
+        {
+            //Key is Captured
+            holdingKey = false;
+            keys++;
         }
     }
 }
