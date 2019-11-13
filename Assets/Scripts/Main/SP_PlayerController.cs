@@ -28,6 +28,9 @@ public class SP_PlayerController : MonoBehaviour
     public bool holdingKey;
     public GameObject holdingItem;
 
+    public GameObject rollUI;
+    public GameObject useItemUI;
+
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
@@ -64,11 +67,15 @@ public class SP_PlayerController : MonoBehaviour
 
             case 0: //Idle (waiting for roll)
                 Debug.Log("State 0");
-                if (Input.GetKeyDown(KeyCode.R))
+
+                rollUI.SetActive(true);
+                if (holdingItem != null)
                 {
-                    moves = dice.GetComponent<SP_DiceRoll>().RollDice();
-                    currentSpace.GetComponent<SP_NodeScript>().isOccupied = false;
-                    state = 1;
+                    useItemUI.SetActive(true);
+                }
+                else
+                {
+                    useItemUI.SetActive(false);
                 }
                 break;
             case 1: //Select Direction
@@ -90,6 +97,18 @@ public class SP_PlayerController : MonoBehaviour
 
         transform.position = currentSpace.transform.position;
 
+    }
+
+    public void Roll()
+    {
+        if (state == 0)
+        {
+            Debug.LogWarning(gameObject.name + "has recieved button press");
+            moves = dice.GetComponent<SP_DiceRoll>().RollDice();
+            currentSpace.GetComponent<SP_NodeScript>().isOccupied = false;
+            state = 1;
+            rollUI.SetActive(false);
+        }
     }
 
     void SelectDirection()
