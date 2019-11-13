@@ -16,15 +16,13 @@ public class SP_CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target.transform.position);
-
         if (Input.GetKey(KeyCode.A))    //Left
         {
-            transform.Translate(Vector3.left * Time.deltaTime * cameraSpeed);
+            target.transform.Rotate(0f, cameraSpeed, 0f);
         }
         else if (Input.GetKey(KeyCode.D))    //Right
         {
-            transform.Translate(Vector3.right * Time.deltaTime * cameraSpeed);
+            target.transform.Rotate(0f, -cameraSpeed, 0f);
         }
 
 
