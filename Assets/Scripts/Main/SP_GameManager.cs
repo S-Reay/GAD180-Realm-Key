@@ -14,10 +14,20 @@ public class SP_GameManager : MonoBehaviour
     public GameObject P3UI;
     public GameObject P4UI;
 
+    public Text P1Name;
+    public Text P2Name;
+    public Text P3Name;
+    public Text P4Name;
+
     public int keySpawnCountdown;
 
     void Start()
     {
+        P1Name.text = PlayerPrefs.GetString("P1Name", "PlayerNotFound");
+        P2Name.text = PlayerPrefs.GetString("P2Name", "PlayerNotFound");
+        P3Name.text = PlayerPrefs.GetString("P3Name", "PlayerNotFound");
+        P4Name.text = PlayerPrefs.GetString("P4Name", "PlayerNotFound");
+
         switch (PlayerPrefs.GetInt("PlayerAmount"))
         {
             case 2:
@@ -37,6 +47,7 @@ public class SP_GameManager : MonoBehaviour
                 Debug.LogError("PlayerPrefs:PlayerAmount Is not within expected range");
                 break;
         }
+
 
         for (int i = 0; i < PlayerPrefs.GetInt("PlayerAmount"); i++)    //populates the List with each player gameobject
         {
@@ -115,16 +126,16 @@ public class SP_GameManager : MonoBehaviour
         switch (player)
         {
             case 1:
-                P1UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "Player 1\nKeys: " + keys;
+                P1UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "x " + keys;
                 break;
             case 2:
-                P2UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "Player 2\nKeys: " + keys;
+                P2UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "x " + keys;
                 break;
             case 3:
-                P3UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "Player 3\nKeys: " + keys;
+                P3UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "x " + keys;
                 break;
             case 4:
-                P4UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "Player 4\nKeys: " + keys;
+                P4UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "x " + keys;
                 break;
             default:
                 break;

@@ -28,6 +28,15 @@ public class SP_PlayerController : MonoBehaviour
     public bool holdingKey;
     public GameObject holdingItem;
 
+    public int[] items = new int[3];
+    public Image[] itemSpritesUI = new Image[3];
+     /* Item Codes:
+     *  0 - Empty Slot
+     *  1 - Stun
+     *  2 - Triple Dice
+     *  3 - Rigged Dice
+     */
+
     public GameObject rollUI;
     public GameObject useItemUI;
 
@@ -55,43 +64,41 @@ public class SP_PlayerController : MonoBehaviour
             default:
                 break;
         }
+        gameManager.GetComponent<SP_GameManager>().UpdatePlayerUI(team, keys);
     }
+
 
     void Update()
     {
         switch (state)
         {
             case -1: //Innactive (Not This Player's Turn)
-                Debug.Log("State -1");
                 break;
 
             case 0: //Idle (waiting for roll)
-                Debug.Log("State 0");
 
                 rollUI.SetActive(true);
-                if (holdingItem != null)
+                useItemUI.SetActive(false);
+                for (int i = 0; i < items.Length; i++)
                 {
-                    useItemUI.SetActive(true);
+                    if (items[i] != 0)
+                    {
+                        useItemUI.SetActive(true);
+                    }
                 }
-                else
-                {
-                    useItemUI.SetActive(false);
-                }
+
                 break;
             case 1: //Select Direction
-                Debug.Log("State 1");
                 SelectDirection();
                 break;
             case 2: //Move to next space
-                Debug.Log("State 2");
                 MovePlayer();
                 break;
             case 3: //Determine next space
-                Debug.Log("State 3");
                 DetermineDestination();
                 break;
             default:
-                Debug.Log("State Default");
+                Debug.LogError("State Default");
                 break;
         }
 
@@ -103,7 +110,6 @@ public class SP_PlayerController : MonoBehaviour
     {
         if (state == 0)
         {
-            Debug.LogWarning(gameObject.name + "has recieved button press");
             moves = dice.GetComponent<SP_DiceRoll>().RollDice();
             currentSpace.GetComponent<SP_NodeScript>().isOccupied = false;
             state = 1;
@@ -217,25 +223,19 @@ public class SP_PlayerController : MonoBehaviour
             currentSpace.GetComponent<SP_NodeScript>().heldKey = null;
             holdingKey = true;
         }
-        else if (currentSpace.GetComponent<SP_NodeScript>().heldItem != null && holdingItem == null)    //If the space has an item but the player isn't holding one
+        else if (currentSpace.GetComponent<SP_NodeScript>().heldItem != null)   //If the space has an item
         {
-            switch (currentSpace.GetComponent<SP_NodeScript>().heldItem.tag)
+            for (int i = 0; i < items.Length; i++)
             {
-                case "Stun":
-                    holdingItem = currentSpace.GetComponent<SP_NodeScript>().heldItem;
-                    break;
-                case "TripleDice":
-                    holdingItem = currentSpace.GetComponent<SP_NodeScript>().heldItem;
-                    break;
-                case "RiggedDice":
-                    holdingItem = currentSpace.GetComponent<SP_NodeScript>().heldItem;
-                    break;
-                default:
-                    break;
+                if (items[i] == 0)                                              //If the player has a free space
+                {
+                    items [i] = currentSpace.GetComponent<SP_NodeScript>().heldItem.GetComponent<SP_Item>().itemID; //Adds to the first available slot
+                    itemSpritesUI[i].sprite = currentSpace.GetComponent<SP_NodeScript>().heldItem.GetComponent<SP_Item>().itemSprite;
+                    Destroy(currentSpace.GetComponent<SP_NodeScript>().heldItem);
+                    currentSpace.GetComponent<SP_NodeScript>().heldItem = null;
+                    return;
+                }
             }
-
-            Destroy(currentSpace.GetComponent<SP_NodeScript>().heldItem);           //ISSUE: Destroying gameobject removes it from player's inventory, possible solution: Store items in inventory as Int not GameObject
-            currentSpace.GetComponent<SP_NodeScript>().heldItem = null;
         }
         else if (team == currentSpace.GetComponent<SP_NodeScript>().team && holdingKey)
         {

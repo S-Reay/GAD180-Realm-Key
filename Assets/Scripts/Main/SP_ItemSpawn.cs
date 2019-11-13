@@ -24,7 +24,11 @@ public class SP_ItemSpawn : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            SpawnItem();
+            for (int i = 0; i < 10; i++)
+            {
+                SpawnItem();
+            }
+
         }
     }
 

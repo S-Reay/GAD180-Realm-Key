@@ -1,0 +1,1231 @@
+fileFormatVersion: 2
+guid: 1b7acecf731aebe4c8a3f54a7c01b819
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1134709500059421431
+    second: JH_Realm Key Assets - Sprite Sheet_0
+  - first:
+      213: -7360599045994490534
+    second: JH_Realm Key Assets - Sprite Sheet_1
+  - first:
+      213: 1494351233970510029
+    second: JH_Realm Key Assets - Sprite Sheet_2
+  - first:
+      213: 6043503587447546769
+    second: JH_Realm Key Assets - Sprite Sheet_3
+  - first:
+      213: 6310068074506845312
+    second: JH_Realm Key Assets - Sprite Sheet_4
+  - first:
+      213: 220820244868933683
+    second: JH_Realm Key Assets - Sprite Sheet_5
+  - first:
+      213: 7367173434832158415
+    second: JH_Realm Key Assets - Sprite Sheet_6
+  - first:
+      213: 2269322455540519215
+    second: JH_Realm Key Assets - Sprite Sheet_7
+  - first:
+      213: -1919519814907031179
+    second: JH_Realm Key Assets - Sprite Sheet_8
+  - first:
+      213: 6236227790262132836
+    second: JH_Realm Key Assets - Sprite Sheet_9
+  - first:
+      213: -7866818216252306562
+    second: JH_Realm Key Assets - Sprite Sheet_10
+  - first:
+      213: 6234185472475897194
+    second: JH_Realm Key Assets - Sprite Sheet_11
+  - first:
+      213: -5211917518006341587
+    second: JH_Realm Key Assets - Sprite Sheet_12
+  - first:
+      213: 7364043334922971951
+    second: JH_Realm Key Assets - Sprite Sheet_13
+  - first:
+      213: -5639582834441327434
+    second: JH_Realm Key Assets - Sprite Sheet_14
+  - first:
+      213: -2714216055569697804
+    second: JH_Realm Key Assets - Sprite Sheet_15
+  - first:
+      213: 6071384237487407894
+    second: JH_Realm Key Assets - Sprite Sheet_16
+  - first:
+      213: 3075483607354478387
+    second: JH_Realm Key Assets - Sprite Sheet_17
+  - first:
+      213: 7154406134974909530
+    second: JH_Realm Key Assets - Sprite Sheet_18
+  - first:
+      213: 1678274007061093960
+    second: JH_Realm Key Assets - Sprite Sheet_19
+  - first:
+      213: -7182191975073172429
+    second: JH_Realm Key Assets - Sprite Sheet_20
+  - first:
+      213: -3376213122926313367
+    second: JH_Realm Key Assets - Sprite Sheet_21
+  - first:
+      213: -2229545180291557449
+    second: JH_Realm Key Assets - Sprite Sheet_22
+  - first:
+      213: 8004892934543021813
+    second: JH_Realm Key Assets - Sprite Sheet_23
+  - first:
+      213: -3283881173069178018
+    second: JH_Realm Key Assets - Sprite Sheet_24
+  - first:
+      213: -545684682865090707
+    second: JH_Realm Key Assets - Sprite Sheet_25
+  - first:
+      213: -7194734719703919227
+    second: JH_Realm Key Assets - Sprite Sheet_26
+  - first:
+      213: 1585295610087901549
+    second: JH_Realm Key Assets - Sprite Sheet_27
+  - first:
+      213: -4766371230314036883
+    second: JH_Realm Key Assets - Sprite Sheet_28
+  - first:
+      213: 7878437570571622886
+    second: JH_Realm Key Assets - Sprite Sheet_29
+  - first:
+      213: -8114351096799464176
+    second: JH_Realm Key Assets - Sprite Sheet_30
+  - first:
+      213: 3986074973553498724
+    second: JH_Realm Key Assets - Sprite Sheet_31
+  - first:
+      213: -5644630332544668140
+    second: JH_Realm Key Assets - Sprite Sheet_32
+  - first:
+      213: 9219798488263049430
+    second: JH_Realm Key Assets - Sprite Sheet_33
+  - first:
+      213: -6107967557986902671
+    second: JH_Realm Key Assets - Sprite Sheet_34
+  - first:
+      213: -5555825634348772137
+    second: JH_Realm Key Assets - Sprite Sheet_35
+  - first:
+      213: -358324803931495779
+    second: JH_Realm Key Assets - Sprite Sheet_36
+  - first:
+      213: 7340617995778316084
+    second: JH_Realm Key Assets - Sprite Sheet_37
+  - first:
+      213: -4202796880263350160
+    second: JH_Realm Key Assets - Sprite Sheet_38
+  - first:
+      213: -3356404601488736775
+    second: JH_Realm Key Assets - Sprite Sheet_39
+  - first:
+      213: 3117920373430242583
+    second: JH_Realm Key Assets - Sprite Sheet_40
+  - first:
+      213: -3536019479659187109
+    second: JH_Realm Key Assets - Sprite Sheet_41
+  - first:
+      213: -5928817108582430705
+    second: JH_Realm Key Assets - Sprite Sheet_42
+  - first:
+      213: 6967709143277001252
+    second: JH_Realm Key Assets - Sprite Sheet_43
+  - first:
+      213: 1697780761595300720
+    second: JH_Realm Key Assets - Sprite Sheet_44
+  - first:
+      213: -4162272605322740655
+    second: JH_Realm Key Assets - Sprite Sheet_45
+  - first:
+      213: -8734169583933128997
+    second: JH_Realm Key Assets - Sprite Sheet_46
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3677
+        width: 1027
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb182024aa51b949b42d55315954b37
+      internalID: 1134709500059421431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 3677
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdaaf1b05c3509c40a60e0ae7671f5dd
+      internalID: -7360599045994490534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 3677
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b06691b29a81244cb2de31dd8d04292
+      internalID: 1494351233970510029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 3677
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4326c0ebc29abd54fa8b4520e8272d1c
+      internalID: 6043503587447546769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 3677
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a46dcbc0577544449fd9ab0be169daf
+      internalID: 6310068074506845312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 3197
+        width: 678
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9221022679f342a43aabd67a8b823352
+      internalID: 220820244868933683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 3293
+        width: 675
+        height: 803
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c19d76a2651a44ca45917fddff26d2
+      internalID: 7367173434832158415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 3485
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb7fa447cc1df141a10c7475b8db822
+      internalID: 2269322455540519215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 3485
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95474faee64bffe4581a8ec0a7e85d39
+      internalID: -1919519814907031179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 3485
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3eaf56b4c63c04487c15fc5bc48b49
+      internalID: 6236227790262132836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 3485
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46e64690e6518c46bdf3923a36866df
+      internalID: -7866818216252306562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 3293
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272a67e1b10b6d74f82dff6020bb6320
+      internalID: 6234185472475897194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 3293
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c610c390b0bd0f4580513c7874b0f21
+      internalID: -5211917518006341587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 3293
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e142dd252c1065b43bde8e4787c389b8
+      internalID: 7364043334922971951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 3293
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089884ce8af870c4192b68c8a27f43c1
+      internalID: -5639582834441327434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 3293
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bcb6e78dd9d6f4b8c8a04f6cae66f1
+      internalID: -2714216055569697804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 3101
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0e1239afb334d45b5efbbca9770666
+      internalID: 6071384237487407894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 3101
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fedc4779fce25648861bad9468ad17a
+      internalID: 3075483607354478387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 3101
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2557ab999bd395243b74ebf8b00fc5b4
+      internalID: 7154406134974909530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 3101
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7970c00b3ce74dc468e9ee657d7ac35a
+      internalID: 1678274007061093960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 3101
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50346138fc24a8447b33b20ec4fafebd
+      internalID: -7182191975073172429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 2813
+        width: 294
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1470a26d3f9ed458f8b5368f18e943
+      internalID: -3376213122926313367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2813
+        width: 294
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9daff9b7053319349b9429e69a2b95eb
+      internalID: -2229545180291557449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 2653
+        width: 358
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b088c28ec9d9cb43b02de2adce1f4d9
+      internalID: 8004892934543021813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 2813
+        width: 358
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9462b1276ce5818459be5217d4535d9b
+      internalID: -3283881173069178018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 2653
+        width: 358
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5387cdf2db033946a440901afaabe83
+      internalID: -545684682865090707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 2621
+        width: 294
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5915ff4f5c5be584e83282ebe6b80a8c
+      internalID: -7194734719703919227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2621
+        y: 2621
+        width: 294
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71225789ed6055440aa39f75ef459b79
+      internalID: 1585295610087901549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 2493
+        width: 294
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c576deac8a96f7f4596ae8d119e76dee
+      internalID: -4766371230314036883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 2397
+        width: 294
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523dc78bf79033b488eed2fd362bd96f
+      internalID: 7878437570571622886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 2493
+        width: 294
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85738c720b3a7154cbcb8dbb6b2dac8f
+      internalID: -8114351096799464176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2397
+        width: 294
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb593371742c1143a57e6f81e3ee862
+      internalID: 3986074973553498724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 2205
+        width: 294
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cf3ed6569be0047b10de7d17c7819e
+      internalID: -5644630332544668140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 2173
+        width: 294
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3646b72a748f4494fb6f088145589ad0
+      internalID: 9219798488263049430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2173
+        width: 294
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d93186e81e17264381b5a19e526ac0d
+      internalID: -6107967557986902671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 2237
+        width: 358
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce53526152c52a44b3f2055890c926a
+      internalID: -5555825634348772137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 2077
+        width: 358
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b9a5500abf288418b55f2914c13f2b
+      internalID: -358324803931495779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 2237
+        width: 358
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf13bedf19a7954e96f60e3fd93b0d4
+      internalID: 7340617995778316084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1245
+        width: 646
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605c1812d8cde5a478289a91c2823337
+      internalID: -4202796880263350160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 1245
+        width: 614
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23a5f50897497f47882349edce85aca
+      internalID: -3356404601488736775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 0
+        width: 739
+        height: 2051
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e45854780a9894eb58d60061b6c349
+      internalID: 3117920373430242583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1027
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8cd8ada79016f44a0b02122e5af1ef
+      internalID: -3536019479659187109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 765
+        width: 358
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6f0ee3737d69b44ab11258b8ac13de
+      internalID: -5928817108582430705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 221
+        width: 390
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af24318511e66f640b4850448438efc2
+      internalID: 6967709143277001252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 381
+        width: 198
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a371b492b3a2fcb4cb92ba5683f51350
+      internalID: 1697780761595300720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 381
+        width: 198
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbaec3f49eec9df4797fe647ad2952f3
+      internalID: -4162272605322740655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JH_Realm Key Assets - Sprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 189
+        width: 358
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f13822e0c7bc049acc9707eac092e6
+      internalID: -8734169583933128997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
