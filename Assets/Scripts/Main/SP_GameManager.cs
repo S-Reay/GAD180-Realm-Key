@@ -9,6 +9,11 @@ public class SP_GameManager : MonoBehaviour
     public int activePlayer = 0;
     public Text activePlayerUI;
 
+    public GameObject P1UI;
+    public GameObject P2UI;
+    public GameObject P3UI;
+    public GameObject P4UI;
+
     public int keySpawnCountdown;
 
     void Start()
@@ -18,9 +23,12 @@ public class SP_GameManager : MonoBehaviour
             case 2:
                 Destroy(GameObject.Find("Player 3"));
                 Destroy(GameObject.Find("Player 4"));
+                P3UI.SetActive(false);
+                P4UI.SetActive(false);
                 break;
             case 3:
                 Destroy(GameObject.Find("Player 4"));
+                P4UI.SetActive(false);
                 break;
             case 4:
 
@@ -41,7 +49,9 @@ public class SP_GameManager : MonoBehaviour
         }
         players[activePlayer].GetComponent<SP_PlayerController>().state = 0;    //starts turn for first player in List
 
-        keySpawnCountdown = 1;
+        keySpawnCountdown = 1;                                                  //all players get 1 move before the first key spawns
+
+
     }
 
     public void NextPlayer()
@@ -63,7 +73,7 @@ public class SP_GameManager : MonoBehaviour
             {
                 //Spawn Key
                 gameObject.GetComponent<SP_KeySpawn>().SpawnKey();
-                keySpawnCountdown = Random.Range(2, 4);
+                keySpawnCountdown = Random.Range(4, 6);
             }
         }
 
@@ -98,5 +108,26 @@ public class SP_GameManager : MonoBehaviour
     void Update()
     {
         DisplayActivePlayerName();
+    }
+
+    public void UpdatePlayerUI(int player, int keys)
+    {
+        switch (player)
+        {
+            case 1:
+                P1UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "Player 1\nKeys: " + keys;
+                break;
+            case 2:
+                P2UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "Player 2\nKeys: " + keys;
+                break;
+            case 3:
+                P3UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "Player 3\nKeys: " + keys;
+                break;
+            case 4:
+                P4UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "Player 4\nKeys: " + keys;
+                break;
+            default:
+                break;
+        }
     }
 }

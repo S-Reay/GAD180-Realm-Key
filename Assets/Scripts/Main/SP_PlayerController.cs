@@ -223,6 +223,7 @@ public class SP_PlayerController : MonoBehaviour
             //Key is Captured
             holdingKey = false;
             keys++;
+            gameManager.GetComponent<SP_GameManager>().UpdatePlayerUI(team, keys);
         }
     }
 }
