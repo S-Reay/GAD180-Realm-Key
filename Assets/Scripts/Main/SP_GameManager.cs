@@ -26,7 +26,7 @@ public class SP_GameManager : MonoBehaviour
 
                 break;
             default:
-                Debug.LogError("Erorr :(");
+                Debug.LogError("PlayerPrefs:PlayerAmount Is not within expected range");
                 break;
         }
 
