@@ -16,6 +16,8 @@ public class SP_PlayerController : MonoBehaviour
     */
     public Text diceText;
     public GameObject dice;
+    public Text stunPrompt;
+    public Text stunDenied;
 
     public GameObject previousSpace;
     public GameObject currentSpace;
@@ -159,8 +161,47 @@ public class SP_PlayerController : MonoBehaviour
 
     void UseStun()
     {
-        //Show Player Select UI
+        stunPrompt.enabled = true;
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+
+        //Choose Direction
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.gameObject.tag == "Player")
+                {
+                    if (hit.transform.gameObject.GetComponent<SP_PlayerController>().isStunned == true) //If the player is already stunned
+                    {
+                        stunDenied.enabled = true;
+                    }
+                    else
+                    {
+                        Debug.Log("Player has clicked " + hit.transform.gameObject.name);
+                        hit.transform.gameObject.GetComponent<SP_PlayerController>().isStunned = true;
+                        stunPrompt.enabled = false;
+                    }
+
+                }
+            }
+        }
     }
+
+    private IEnumerator HideStunDenied()
+    {
+        float delay = 3f;
+        float normalizedTime = 0;
+        while (normalizedTime <= 1f)
+        {
+            normalizedTime += Time.deltaTime / delay;
+            yield return null;
+        }
+        stunDenied.enabled = false;
+    }
+
+
     void UseTripleDice()
     {
         moves = dice.GetComponent<SP_DiceRoll>().RollTripleDice();
