@@ -12,4 +12,10 @@ public class SP_DiceRoll : MonoBehaviour
         diceText.text = "Last Roll: " + x.ToString();
         return x;
     }
+    public int RollTripleDice()
+    {
+        int x = Random.Range(3, 19);
+        diceText.text = "Last Roll: " + x.ToString();
+        return x;
+    }
 }

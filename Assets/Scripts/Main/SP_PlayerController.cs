@@ -24,12 +24,14 @@ public class SP_PlayerController : MonoBehaviour
     public GameObject gameManager;
     public int moves;
     public int keys;
+    public bool isStunned = false;
 
     public bool holdingKey;
     public GameObject holdingItem;
 
     public int[] items = new int[3];
     public Image[] itemSpritesUI = new Image[3];
+    public Button[] itemButtons = new Button[3];
      /* Item Codes:
      *  0 - Empty Slot
      *  1 - Stun
@@ -65,6 +67,14 @@ public class SP_PlayerController : MonoBehaviour
                 break;
         }
         gameManager.GetComponent<SP_GameManager>().UpdatePlayerUI(team, keys);
+        for (int i = 0; i < itemSpritesUI.Length; i++)
+        {
+            itemSpritesUI[i].enabled = false;           //Disable all item slot sprites
+        }
+        for (int i = 0; i < itemButtons.Length; i++)
+        {
+            itemButtons[i].enabled = false;         //Disables all buttons while it is not this player's turn
+        }
     }
 
 
@@ -73,6 +83,10 @@ public class SP_PlayerController : MonoBehaviour
         switch (state)
         {
             case -1: //Innactive (Not This Player's Turn)
+                for (int i = 0; i < itemButtons.Length; i++)
+                {
+                    itemButtons[i].enabled = false;         //Disables all buttons while it is not this player's turn
+                }
                 break;
 
             case 0: //Idle (waiting for roll)
@@ -83,7 +97,7 @@ public class SP_PlayerController : MonoBehaviour
                 {
                     if (items[i] != 0)
                     {
-                        useItemUI.SetActive(true);
+                        itemButtons[i].GetComponent<Button>().enabled = true;
                     }
                 }
 
@@ -115,6 +129,50 @@ public class SP_PlayerController : MonoBehaviour
             state = 1;
             rollUI.SetActive(false);
         }
+    }
+
+    public void UseItem(int slot)
+    {
+        if (items[slot] != 0)
+        {
+            switch (items[slot])
+            {
+                case 1: //Stun
+                    UseStun();
+                    break;
+                case 2: //Triple Dice
+                    UseTripleDice();
+                    break;
+                case 3: // Rigged Dice
+                    UseRiggedDice();
+                    break;
+                default:
+                    break;
+            }
+            items[slot] = 0;
+            itemSpritesUI[slot].sprite = null;
+            itemSpritesUI[slot].enabled = false;
+            itemButtons[slot].enabled = false;
+        }
+
+    }
+
+    void UseStun()
+    {
+        //Show Player Select UI
+    }
+    void UseTripleDice()
+    {
+        moves = dice.GetComponent<SP_DiceRoll>().RollTripleDice();
+        currentSpace.GetComponent<SP_NodeScript>().isOccupied = false;
+        state = 1;
+        rollUI.SetActive(false);
+        useItemUI.SetActive(false);
+
+    }
+    void UseRiggedDice()
+    {
+        //Show Number Input UI
     }
 
     void SelectDirection()
@@ -229,10 +287,11 @@ public class SP_PlayerController : MonoBehaviour
             {
                 if (items[i] == 0)                                              //If the player has a free space
                 {
-                    items [i] = currentSpace.GetComponent<SP_NodeScript>().heldItem.GetComponent<SP_Item>().itemID; //Adds to the first available slot
-                    itemSpritesUI[i].sprite = currentSpace.GetComponent<SP_NodeScript>().heldItem.GetComponent<SP_Item>().itemSprite;
-                    Destroy(currentSpace.GetComponent<SP_NodeScript>().heldItem);
-                    currentSpace.GetComponent<SP_NodeScript>().heldItem = null;
+                    items [i] = currentSpace.GetComponent<SP_NodeScript>().heldItem.GetComponent<SP_Item>().itemID;                     //Adds to the first available slot
+                    itemSpritesUI[i].sprite = currentSpace.GetComponent<SP_NodeScript>().heldItem.GetComponent<SP_Item>().itemSprite;   //Assigns the correct sprite
+                    itemSpritesUI[i].enabled = true;                                                                                    //Enables the item slot image
+                    Destroy(currentSpace.GetComponent<SP_NodeScript>().heldItem);                                                       //Removes the item from the board
+                    currentSpace.GetComponent<SP_NodeScript>().heldItem = null;                                                         //Removes the item from the Node's script
                     return;
                 }
             }
