@@ -20,6 +20,19 @@ public class SP_GameManager : MonoBehaviour
     public TextMeshProUGUI P3Name;
     public TextMeshProUGUI P4Name;
 
+    public GameObject P1GreyKey1;
+    public GameObject P1GreyKey2;
+    public GameObject P1GreyKey3;
+    public GameObject P2GreyKey1;
+    public GameObject P2GreyKey2;
+    public GameObject P2GreyKey3;
+    public GameObject P3GreyKey1;
+    public GameObject P3GreyKey2;
+    public GameObject P3GreyKey3;
+    public GameObject P4GreyKey1;
+    public GameObject P4GreyKey2;
+    public GameObject P4GreyKey3;
+
     public int keySpawnCountdown;
 
     void Start()
@@ -129,16 +142,80 @@ public class SP_GameManager : MonoBehaviour
         switch (player)
         {
             case 1:
-                P1UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "x " + keys;
+                switch (keys)
+                {
+                    case 0:
+
+                        break;
+                    case 1:
+                        P1GreyKey1.SetActive(false);
+                        break;
+                    case 2:
+                        P1GreyKey2.SetActive(false);
+                        break;
+                    case 3:
+                        P1GreyKey3.SetActive(false);
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case 2:
-                P2UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "x " + keys;
+                switch (keys)
+                {
+                    case 0:
+
+                        break;
+                    case 1:
+                        P2GreyKey1.SetActive(false);
+                        break;
+                    case 2:
+                        P2GreyKey2.SetActive(false);
+                        break;
+                    case 3:
+                        P2GreyKey3.SetActive(false);
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case 3:
-                P3UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "x " + keys;
+                switch (keys)
+                {
+                    case 0:
+
+                        break;
+                    case 1:
+                        P3GreyKey1.SetActive(false);
+                        break;
+                    case 2:
+                        P3GreyKey2.SetActive(false);
+                        break;
+                    case 3:
+                        P3GreyKey3.SetActive(false);
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case 4:
-                P4UI.transform.GetChild(1).gameObject.GetComponent<Text>().text = "x " + keys;
+                switch (keys)
+                {
+                    case 0:
+
+                        break;
+                    case 1:
+                        P4GreyKey1.SetActive(false);
+                        break;
+                    case 2:
+                        P4GreyKey2.SetActive(false);
+                        break;
+                    case 3:
+                        P4GreyKey3.SetActive(false);
+                        break;
+                    default:
+                        break;
+                }
                 break;
             default:
                 break;
