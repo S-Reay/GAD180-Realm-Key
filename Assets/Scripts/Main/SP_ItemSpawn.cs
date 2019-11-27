@@ -54,7 +54,7 @@ public class SP_ItemSpawn : MonoBehaviour
             case 2:     //RiggedDice
                 if (itemSpawns[whichSpace].GetComponent<SP_NodeScript>().heldItem == null && !itemSpawns[whichSpace].GetComponent<SP_NodeScript>().isOccupied)
                 {
-                    itemSpawns[whichSpace].GetComponent<SP_NodeScript>().heldItem = riggedDice = Instantiate(riggedDice, itemSpawns[whichSpace].transform.position, transform.rotation);
+                    itemSpawns[whichSpace].GetComponent<SP_NodeScript>().heldItem = riggedDice = Instantiate(riggedDice, itemSpawns[whichSpace].transform.position, transform.rotation);        //THIS MAY BE CAUSING A MAJOR BUG :(
                     
                 }
                 break;

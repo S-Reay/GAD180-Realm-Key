@@ -20,6 +20,11 @@ public class SP_GameManager : MonoBehaviour
     public TextMeshProUGUI P3Name;
     public TextMeshProUGUI P4Name;
 
+    public TextMeshProUGUI P1Stun;
+    public TextMeshProUGUI P2Stun;
+    public TextMeshProUGUI P3Stun;
+    public TextMeshProUGUI P4Stun;
+
     public GameObject P1GreyKey1;
     public GameObject P1GreyKey2;
     public GameObject P1GreyKey3;
@@ -42,6 +47,11 @@ public class SP_GameManager : MonoBehaviour
         P3Name.text = PlayerPrefs.GetString("P3Name", "PlayerNotFound");
         P4Name.text = PlayerPrefs.GetString("P4Name", "PlayerNotFound");
 
+        P1Stun.text = PlayerPrefs.GetString("P1Name", "PlayerNotFound");
+        P2Stun.text = PlayerPrefs.GetString("P2Name", "PlayerNotFound");
+        P3Stun.text = PlayerPrefs.GetString("P3Name", "PlayerNotFound");
+        P4Stun.text = PlayerPrefs.GetString("P4Name", "PlayerNotFound");
+
         switch (PlayerPrefs.GetInt("PlayerAmount"))
         {
             case 2:
@@ -49,10 +59,13 @@ public class SP_GameManager : MonoBehaviour
                 Destroy(GameObject.Find("Player 4"));
                 P3UI.SetActive(false);
                 P4UI.SetActive(false);
+                Destroy(P3Stun.gameObject);
+                Destroy(P4Stun.gameObject);
                 break;
             case 3:
                 Destroy(GameObject.Find("Player 4"));
                 P4UI.SetActive(false);
+                Destroy(P4Stun.gameObject);
                 break;
             case 4:
 
@@ -86,7 +99,6 @@ public class SP_GameManager : MonoBehaviour
         if (activePlayer != PlayerPrefs.GetInt("PlayerAmount")-1)
         {
             activePlayer++;
-            gameObject.GetComponent<SP_ItemSpawn>().SpawnItem();
             gameObject.GetComponent<SP_ItemSpawn>().SpawnItem();
         }
         else

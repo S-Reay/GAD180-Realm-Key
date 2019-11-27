@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SP_PlayerController : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class SP_PlayerController : MonoBehaviour
     * 3 - Green (Player 3)
     * 4 - Yellow (Player 4)
     */
-    public Text diceText;
+    public TextMeshProUGUI diceText;
     public GameObject dice;
     public GameObject stunPrompt;
     public GameObject stunDisplay;
@@ -43,7 +44,6 @@ public class SP_PlayerController : MonoBehaviour
      */
 
     public GameObject rollUI;
-    public GameObject useItemUI;
 
     void Start()
     {
@@ -96,7 +96,6 @@ public class SP_PlayerController : MonoBehaviour
                 if (!isStunned)
                 {
                     rollUI.SetActive(true);
-                    useItemUI.SetActive(false);
                     for (int i = 0; i < items.Length; i++)
                     {
                         if (items[i] != 0)
@@ -189,8 +188,6 @@ public class SP_PlayerController : MonoBehaviour
         currentSpace.GetComponent<SP_NodeScript>().isOccupied = false;
         state = 1;
         rollUI.SetActive(false);
-        useItemUI.SetActive(false);
-
     }
     public void UseRiggedDice(int choice)
     {
