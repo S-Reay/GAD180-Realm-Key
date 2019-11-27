@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: c115968d25f9aa34b8fa1b1192e43162
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3335978094631996219
+    second: Realm Key Assets - Sprite Sheet v4_0
+  - first:
+      213: 6546086216498948557
+    second: Realm Key Assets - Sprite Sheet v4_1
+  - first:
+      213: -4288055683524589898
+    second: Realm Key Assets - Sprite Sheet v4_2
+  - first:
+      213: -4039229384444489538
+    second: Realm Key Assets - Sprite Sheet v4_3
+  - first:
+      213: 3416407662403696433
+    second: Realm Key Assets - Sprite Sheet v4_4
+  - first:
+      213: -1404838731317329869
+    second: Realm Key Assets - Sprite Sheet v4_5
+  - first:
+      213: -1979485776220249844
+    second: Realm Key Assets - Sprite Sheet v4_6
+  - first:
+      213: 7210777406449848246
+    second: Realm Key Assets - Sprite Sheet v4_7
+  - first:
+      213: -416216414676148924
+    second: Realm Key Assets - Sprite Sheet v4_8
+  - first:
+      213: -4179139897877749733
+    second: Realm Key Assets - Sprite Sheet v4_9
+  - first:
+      213: -7592610454122579251
+    second: Realm Key Assets - Sprite Sheet v4_10
+  - first:
+      213: -3269787508012797595
+    second: Realm Key Assets - Sprite Sheet v4_11
+  - first:
+      213: 7654631388169508530
+    second: Realm Key Assets - Sprite Sheet v4_12
+  - first:
+      213: 4246649445599608953
+    second: Realm Key Assets - Sprite Sheet v4_13
+  - first:
+      213: 2507479499650105130
+    second: Realm Key Assets - Sprite Sheet v4_14
+  - first:
+      213: 2556744591831193014
+    second: Realm Key Assets - Sprite Sheet v4_15
+  - first:
+      213: 7390502282287214180
+    second: Realm Key Assets - Sprite Sheet v4_16
+  - first:
+      213: -7112474580216836218
+    second: Realm Key Assets - Sprite Sheet v4_17
+  - first:
+      213: -5473309540342026843
+    second: Realm Key Assets - Sprite Sheet v4_18
+  - first:
+      213: 3661539620130226112
+    second: Realm Key Assets - Sprite Sheet v4_19
+  - first:
+      213: 8190151332617975455
+    second: Realm Key Assets - Sprite Sheet v4_20
+  - first:
+      213: 430276774700340218
+    second: Realm Key Assets - Sprite Sheet v4_21
+  - first:
+      213: -5658568816929941077
+    second: Realm Key Assets - Sprite Sheet v4_22
+  - first:
+      213: 5236127673657252763
+    second: Realm Key Assets - Sprite Sheet v4_23
+  - first:
+      213: 5561701454219705272
+    second: Realm Key Assets - Sprite Sheet v4_24
+  - first:
+      213: -7957122345283672433
+    second: Realm Key Assets - Sprite Sheet v4_25
+  - first:
+      213: 315135483639768873
+    second: Realm Key Assets - Sprite Sheet v4_26
+  - first:
+      213: -3932239956463701652
+    second: Realm Key Assets - Sprite Sheet v4_27
+  - first:
+      213: 6960297405772797422
+    second: Realm Key Assets - Sprite Sheet v4_28
+  - first:
+      213: 285921119149311922
+    second: Realm Key Assets - Sprite Sheet v4_29
+  - first:
+      213: -2615065180503259811
+    second: Realm Key Assets - Sprite Sheet v4_30
+  - first:
+      213: -7289290534221364349
+    second: Realm Key Assets - Sprite Sheet v4_31
+  - first:
+      213: -8498214541617380683
+    second: Realm Key Assets - Sprite Sheet v4_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2654
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38356e59e2123f049bb41e19da48cdd4
+      internalID: 3335978094631996219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2654
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ffcebb4aa123c47ac49563c7ded882
+      internalID: 6546086216498948557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_2
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 2654
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e863d58fada8bf7438a0399385715ef4
+      internalID: -4288055683524589898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_3
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 2654
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6134e7b777e652d4c8b1744ad0e43fa5
+      internalID: -4039229384444489538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_4
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 2654
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581691e8f87592b409d25eac339f2e39
+      internalID: 3416407662403696433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_5
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 2174
+        width: 675
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2738a0e8ca63e148b3c5c1d959205dc
+      internalID: -1404838731317329869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_6
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 2174
+        width: 676
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacec1a69c829d348b5e8f8e5e5a64e7
+      internalID: -1979485776220249844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_7
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2462
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc390286efad7414293153e74d76e9cf
+      internalID: 7210777406449848246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_8
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2462
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e516a9ccd9829f469f1ded9ee976b87
+      internalID: -416216414676148924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_9
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 2462
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97f87e9a024554468c8fab15a4e9ab7
+      internalID: -4179139897877749733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_10
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 2462
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42928ea20ef2414c90f2f6c6fdba79f
+      internalID: -7592610454122579251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_11
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2270
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07283e36925ddeb499c58cb52a13e85d
+      internalID: -3269787508012797595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_12
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2270
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ecbabb32787cd4dac1d209ab03a7cd
+      internalID: 7654631388169508530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_13
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 2270
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1d8849c7f4c4c458b023a125cfdba5
+      internalID: 4246649445599608953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_14
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 2270
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0e2e97c40c9bf4aa6857e0c1a50f14
+      internalID: 2507479499650105130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_15
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 2270
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9487b4c9b25b4b942b8be4110ff2718c
+      internalID: 2556744591831193014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_16
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2078
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21b5f36c1312d64db0235c56ab2724b
+      internalID: 7390502282287214180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_17
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2078
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8490e8009f0c91546a8a064245645abf
+      internalID: -7112474580216836218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_18
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 2078
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b4f87b002977145bb0b551d65cc276
+      internalID: -5473309540342026843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_19
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 2078
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f609834b7384964e9977ddc81d017ed
+      internalID: 3661539620130226112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_20
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 2078
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1478557fc100c24e863f4f349d10aa1
+      internalID: 8190151332617975455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_21
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1630
+        width: 355
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5c2efac1ea0194492da347282ea042
+      internalID: 430276774700340218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_22
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1790
+        width: 355
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca153e34594c0c64b9c9fcd5794b8eb5
+      internalID: -5658568816929941077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_23
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1630
+        width: 355
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88ef8aab1316f04b9e77362d4659b4e
+      internalID: 5236127673657252763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_24
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1246
+        width: 644
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bb217767f2a9442872965894904a0a
+      internalID: 5561701454219705272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_25
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 1054
+        width: 451
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a749dfeb56d29241b4a370674631969
+      internalID: -7957122345283672433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_26
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1246
+        width: 355
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bc3e6b34ac5f841acfe6b5b095795d
+      internalID: 315135483639768873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_27
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1375
+        width: 291
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96638c1422e792745b53863f34ecb7d1
+      internalID: -3932239956463701652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_28
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1246
+        width: 355
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5896181b2f1e3ab4795fc39e91303e08
+      internalID: 6960297405772797422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_29
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1087
+        width: 355
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de18264fd741ab54e88cdc01c96169fb
+      internalID: 285921119149311922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 994
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18cbf4df7ec7c7143922010d2c421be9
+      internalID: -2615065180503259811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_31
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 62
+        width: 867
+        height: 932
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5881870c125ab149bab1f09d38204bf
+      internalID: -7289290534221364349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Realm Key Assets - Sprite Sheet v4_32
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 31
+        width: 802
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45388dc4f118dcb459fadc9bf6f875ee
+      internalID: -8498214541617380683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
