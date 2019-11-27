@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SP_DiceRoll : MonoBehaviour
 {
-    public Text diceText;
+    public TextMeshProUGUI diceText;
     public int RollDice()
     {
         int x = Random.Range(1, 7);

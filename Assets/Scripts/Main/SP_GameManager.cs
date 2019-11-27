@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SP_GameManager : MonoBehaviour
 {
     public List<GameObject> players = new List<GameObject>();
     public int activePlayer = 0;
-    public Text activePlayerUI;
+    public TextMeshProUGUI activePlayerUI;
 
     public GameObject P1UI;
     public GameObject P2UI;
     public GameObject P3UI;
     public GameObject P4UI;
 
-    public Text P1Name;
-    public Text P2Name;
-    public Text P3Name;
-    public Text P4Name;
+    public TextMeshProUGUI P1Name;
+    public TextMeshProUGUI P2Name;
+    public TextMeshProUGUI P3Name;
+    public TextMeshProUGUI P4Name;
 
     public int keySpawnCountdown;
 
