@@ -72,6 +72,8 @@ public class SP_GameManager : MonoBehaviour
         if (activePlayer != PlayerPrefs.GetInt("PlayerAmount")-1)
         {
             activePlayer++;
+            gameObject.GetComponent<SP_ItemSpawn>().SpawnItem();
+            gameObject.GetComponent<SP_ItemSpawn>().SpawnItem();
         }
         else
         {

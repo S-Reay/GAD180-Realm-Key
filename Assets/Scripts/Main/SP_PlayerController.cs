@@ -16,8 +16,9 @@ public class SP_PlayerController : MonoBehaviour
     */
     public Text diceText;
     public GameObject dice;
-    public Text stunPrompt;
-    public Text stunDenied;
+    public GameObject stunPrompt;
+    public GameObject stunDisplay;
+    public GameObject riggedDicePrompt;
 
     public GameObject previousSpace;
     public GameObject currentSpace;
@@ -92,16 +93,24 @@ public class SP_PlayerController : MonoBehaviour
                 break;
 
             case 0: //Idle (waiting for roll)
-
-                rollUI.SetActive(true);
-                useItemUI.SetActive(false);
-                for (int i = 0; i < items.Length; i++)
+                if (!isStunned)
                 {
-                    if (items[i] != 0)
+                    rollUI.SetActive(true);
+                    useItemUI.SetActive(false);
+                    for (int i = 0; i < items.Length; i++)
                     {
-                        itemButtons[i].GetComponent<Button>().enabled = true;
+                        if (items[i] != 0)
+                        {
+                            itemButtons[i].GetComponent<Button>().enabled = true;
+                        }
                     }
                 }
+                else
+                {
+                    StartCoroutine(CoDisplayStunText());
+                    isStunned = false;  //This occurs here so that the coroutin is only called once
+                }
+
 
                 break;
             case 1: //Select Direction
@@ -120,6 +129,15 @@ public class SP_PlayerController : MonoBehaviour
 
         transform.position = currentSpace.transform.position;
 
+    }
+
+    IEnumerator CoDisplayStunText()
+    {
+        stunDisplay.SetActive(true);
+        yield return new WaitForSeconds(3);
+        stunDisplay.SetActive(false);
+        state = -1; //ends player's turn when moves run out
+        gameManager.GetComponent<SP_GameManager>().NextPlayer();
     }
 
     public void Roll()
@@ -146,7 +164,8 @@ public class SP_PlayerController : MonoBehaviour
                     UseTripleDice();
                     break;
                 case 3: // Rigged Dice
-                    UseRiggedDice();
+                    riggedDicePrompt.SetActive(true);
+                    rollUI.SetActive(false);
                     break;
                 default:
                     break;
@@ -161,46 +180,8 @@ public class SP_PlayerController : MonoBehaviour
 
     void UseStun()
     {
-        stunPrompt.enabled = true;
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-
-        //Choose Direction
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform.gameObject.tag == "Player")
-                {
-                    if (hit.transform.gameObject.GetComponent<SP_PlayerController>().isStunned == true) //If the player is already stunned
-                    {
-                        stunDenied.enabled = true;
-                    }
-                    else
-                    {
-                        Debug.Log("Player has clicked " + hit.transform.gameObject.name);
-                        hit.transform.gameObject.GetComponent<SP_PlayerController>().isStunned = true;
-                        stunPrompt.enabled = false;
-                    }
-
-                }
-            }
-        }
+        stunPrompt.SetActive(true);
     }
-
-    private IEnumerator HideStunDenied()
-    {
-        float delay = 3f;
-        float normalizedTime = 0;
-        while (normalizedTime <= 1f)
-        {
-            normalizedTime += Time.deltaTime / delay;
-            yield return null;
-        }
-        stunDenied.enabled = false;
-    }
-
 
     void UseTripleDice()
     {
@@ -211,9 +192,12 @@ public class SP_PlayerController : MonoBehaviour
         useItemUI.SetActive(false);
 
     }
-    void UseRiggedDice()
+    public void UseRiggedDice(int choice)
     {
-        //Show Number Input UI
+        moves = dice.GetComponent<SP_DiceRoll>().RollRiggedDice(choice);    //This is silly but whatever lol
+        riggedDicePrompt.SetActive(false);
+        currentSpace.GetComponent<SP_NodeScript>().isOccupied = false;
+        state = 1;
     }
 
     void SelectDirection()

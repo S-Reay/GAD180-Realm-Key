@@ -18,4 +18,10 @@ public class SP_DiceRoll : MonoBehaviour
         diceText.text = "Last Roll: " + x.ToString();
         return x;
     }
+    public int RollRiggedDice(int choice)
+    {
+        int x = choice;
+        diceText.text = "Last Roll: " + x.ToString();
+        return x;
+    }
 }

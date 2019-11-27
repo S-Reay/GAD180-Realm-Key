@@ -32,7 +32,7 @@ public class SP_ItemSpawn : MonoBehaviour
         }
     }
 
-    void SpawnItem()
+    public void SpawnItem()
     {
         int whichSpace = Random.Range(0, itemSpawns.Count);
         int whichItem = Random.Range(0, 3);
