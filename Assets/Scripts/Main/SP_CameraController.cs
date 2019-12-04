@@ -46,7 +46,7 @@ public class SP_CameraController : MonoBehaviour
                 if (activePlayer != null)
                 {
                     target.transform.position = activePlayer.transform.position;
-                    transform.localPosition = new Vector3(0f, 25f, -50f);
+                    transform.localPosition = new Vector3(0f, 50f, -50f);
                     transform.LookAt(target.transform.position);
                 }
             }
