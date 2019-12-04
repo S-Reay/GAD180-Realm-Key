@@ -88,6 +88,8 @@ public class SP_PlayerController : MonoBehaviour
         {
             itemButtons[i].enabled = false;         //Disables all buttons while it is not this player's turn
         }
+
+        transform.position = currentSpace.transform.position;   //Ensures all players start on thier spawn space
     }
 
 

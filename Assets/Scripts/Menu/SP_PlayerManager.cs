@@ -86,18 +86,22 @@ public class SP_PlayerManager : MonoBehaviour
     public void SetSkin1(int skinID)
     {
         p1SkinID = skinID;
+        PlayerPrefs.SetInt("P1SkinID", skinID);
     }
     public void SetSkin2(int skinID)
     {
         p2SkinID = skinID;
+        PlayerPrefs.SetInt("P2SkinID", skinID);
     }
     public void SetSkin3(int skinID)
     {
         p3SkinID = skinID;
+        PlayerPrefs.SetInt("P3SkinID", skinID);
     }
     public void SetSkin4(int skinID)
     {
         p4SkinID = skinID;
+        PlayerPrefs.SetInt("P4SkinID", skinID);
     }
     public void LoadScene(string name)
     {

@@ -25,6 +25,12 @@ public class SP_Freemium : MonoBehaviour
         greenSkinIcons[0].SetActive(true);
         yellowSkinIcons[0].SetActive(true);
 
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         for (int i = 1; i < redSkinIcons.Length; i++)
         {
             bool isBought = PlayerPrefs.GetInt(i.ToString(), 0) != 0;
@@ -57,12 +63,6 @@ public class SP_Freemium : MonoBehaviour
                 yellowSkinIcons[i].SetActive(true);
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void PurchaseSkin(int skinCode)
