@@ -29,9 +29,19 @@ public class SP_PlayerController : MonoBehaviour
     public int moves;
     public int keys;
     public bool isStunned = false;
+    public bool movePlayerCalled = false;
 
     public bool holdingKey;
     public GameObject holdingItem;
+
+    //public Transform sunrise;
+    //public Transform sunset;
+
+    // Time to move from sunrise to sunset position, in seconds.
+    public float journeyTime = 1.0f;
+
+    // The time at which the animation started.
+    private float startTime;
 
     public int[] items = new int[3];
     public Image[] itemSpritesUI = new Image[3];
@@ -95,6 +105,7 @@ public class SP_PlayerController : MonoBehaviour
             case 0: //Idle (waiting for roll)
                 if (!isStunned)
                 {
+                    Camera.main.GetComponent<SP_CameraController>().activePlayer = this.gameObject;
                     rollUI.SetActive(true);
                     for (int i = 0; i < items.Length; i++)
                     {
@@ -116,7 +127,11 @@ public class SP_PlayerController : MonoBehaviour
                 SelectDirection();
                 break;
             case 2: //Move to next space
-                MovePlayer();
+                if (!movePlayerCalled)
+                {
+                    MovePlayer();
+                    movePlayerCalled = true;
+                }
                 break;
             case 3: //Determine next space
                 DetermineDestination();
@@ -126,7 +141,11 @@ public class SP_PlayerController : MonoBehaviour
                 break;
         }
 
-        transform.position = currentSpace.transform.position;
+        if (previousSpace != null && currentSpace != null)
+        {
+            GetComponent<SP_SlerpMovement>().start = previousSpace.transform;
+            GetComponent<SP_SlerpMovement>().end = currentSpace.transform;
+        }
 
     }
 
@@ -242,29 +261,40 @@ public class SP_PlayerController : MonoBehaviour
         }
     }
 
+    IEnumerator CoMoveDelay(int nextState)
+    {
+        yield return new WaitForSeconds(1f);
+        state = nextState;
+        movePlayerCalled = false;
+        if (nextState == -1)
+        {
+            gameManager.GetComponent<SP_GameManager>().NextPlayer();
+        }
+    }
+
     void MovePlayer()
     {
+        GetComponent<SP_SlerpMovement>().SetStartTime();
+        Debug.Log("MovePlayer called");
         if (moves > 1)
         {
-            previousSpace = currentSpace;
+            previousSpace = currentSpace;   //Keeps track of which space the player was just on, used in DetermineDestination()
             currentSpace = destination;
             moves--;
-            state = 3;
+            StartCoroutine(CoMoveDelay(3));
         }
         else if (moves == 1)
         {
-            previousSpace = currentSpace;
+            previousSpace = currentSpace;   //Keeps track of which space the player was just on, used in DetermineDestination()
             currentSpace = destination;
             moves--;
             CheckSpace();
             currentSpace.GetComponent<SP_NodeScript>().isOccupied = true;
-            state = -1; //ends player's turn when moves run out
-            gameManager.GetComponent<SP_GameManager>().NextPlayer();
+            StartCoroutine(CoMoveDelay(-1)); //ends player's turn when moves run out
         }
         else
         {
-            state = -1; //ends player's turn when moves run out
-            gameManager.GetComponent<SP_GameManager>().NextPlayer();
+            StartCoroutine(CoMoveDelay(-1)); //ends player's turn when moves run out
         }
     }
 
