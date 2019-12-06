@@ -42,15 +42,15 @@ public class SP_GameManager : MonoBehaviour
 
     void Start()
     {
-        P1Name.text = PlayerPrefs.GetString("P1Name", "PlayerNotFound");
-        P2Name.text = PlayerPrefs.GetString("P2Name", "PlayerNotFound");
-        P3Name.text = PlayerPrefs.GetString("P3Name", "PlayerNotFound");
-        P4Name.text = PlayerPrefs.GetString("P4Name", "PlayerNotFound");
+        P1Name.text = PlayerPrefs.GetString("P1Name", "Red");
+        P2Name.text = PlayerPrefs.GetString("P2Name", "Blue");
+        P3Name.text = PlayerPrefs.GetString("P3Name", "Green");
+        P4Name.text = PlayerPrefs.GetString("P4Name", "Yellow");
 
-        P1Stun.text = PlayerPrefs.GetString("P1Name", "PlayerNotFound");
-        P2Stun.text = PlayerPrefs.GetString("P2Name", "PlayerNotFound");
-        P3Stun.text = PlayerPrefs.GetString("P3Name", "PlayerNotFound");
-        P4Stun.text = PlayerPrefs.GetString("P4Name", "PlayerNotFound");
+        P1Stun.text = PlayerPrefs.GetString("P1Name", "Red");
+        P2Stun.text = PlayerPrefs.GetString("P2Name", "Blue");
+        P3Stun.text = PlayerPrefs.GetString("P3Name", "Green");
+        P4Stun.text = PlayerPrefs.GetString("P4Name", "Yellow");
 
         switch (PlayerPrefs.GetInt("PlayerAmount"))
         {

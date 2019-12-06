@@ -4,11 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using TMPro;
 
 public class SP_PlayerManager : MonoBehaviour
-{    
-    public GameObject selectPlayerAmountUI;
-    public GameObject enterNameUI;
+{
+    public GameObject mainMenuUI;           //0
+    public GameObject selectPlayerAmountUI; //1
+    public GameObject enterNameUI;          //2
+    public GameObject optionsUI;            //3
+    public GameObject skinStoreUI;          //4
+    public GameObject currencyExchangeUI;   //5
 
     public InputField p1Input;
     public InputField p2Input;
@@ -35,6 +40,9 @@ public class SP_PlayerManager : MonoBehaviour
     public Sprite[] p3Sprites = new Sprite[6];
     public Sprite[] p4Sprites = new Sprite[6];
 
+    public TextMeshProUGUI coinText;
+    public TextMeshProUGUI coinText1;
+
     /* Skins
      * 0 - Knight
      * 1 - Merchant
@@ -47,12 +55,59 @@ public class SP_PlayerManager : MonoBehaviour
     void Start()
     {
         PlayerPrefs.DeleteAll();
-        selectPlayerAmountUI.SetActive(true);
+        mainMenuUI.SetActive(true);
+        skinStoreUI.SetActive(false);
+        currencyExchangeUI.SetActive(false);
+        optionsUI.SetActive(false);
+        selectPlayerAmountUI.SetActive(false);
         enterNameUI.SetActive(false);
         p1UI.SetActive(false);
         p2UI.SetActive(false);
         p3UI.SetActive(false);
         p4UI.SetActive(false);
+    }
+
+    public void ShowUI(int ID)
+    {
+        mainMenuUI.SetActive(false);
+        skinStoreUI.SetActive(false);
+        currencyExchangeUI.SetActive(false);
+        optionsUI.SetActive(false);
+        selectPlayerAmountUI.SetActive(false);
+        enterNameUI.SetActive(false);
+        p1UI.SetActive(false);
+        p2UI.SetActive(false);
+        p3UI.SetActive(false);
+        p4UI.SetActive(false);
+
+        switch (ID)
+        {
+            case 0:
+                mainMenuUI.SetActive(true);
+                break;
+            case 1:
+                selectPlayerAmountUI.SetActive(true);
+                break;
+            case 2:
+                enterNameUI.SetActive(true);
+                break;
+            case 3:
+                optionsUI.SetActive(true);
+                break;
+            case 4:
+                skinStoreUI.SetActive(true);
+                break;
+            case 5:
+                currencyExchangeUI.SetActive(true);
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 
     public void ChoosePlayerAmount(int x)
@@ -108,6 +163,12 @@ public class SP_PlayerManager : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
+    public void AddCoins(int coins)
+    {
+        Debug.Log("Button");
+        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) + coins);
+    }
+
     void Update()
     {
         Debug.Log(PlayerPrefs.GetString("P1Name"));
@@ -158,5 +219,8 @@ public class SP_PlayerManager : MonoBehaviour
         p2Portrait.GetComponent<Image>().sprite = p2Sprites[p2SkinID];
         p3Portrait.GetComponent<Image>().sprite = p3Sprites[p3SkinID];
         p4Portrait.GetComponent<Image>().sprite = p4Sprites[p4SkinID];
+
+        coinText.text = "Coins: " + PlayerPrefs.GetInt("Coins", 0).ToString();
+        coinText1.text = "Coins: " + PlayerPrefs.GetInt("Coins", 0).ToString();
     }
 }

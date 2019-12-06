@@ -10,7 +10,10 @@ public class SP_CameraController : MonoBehaviour
     public bool mapMode = false;
     public float cameraSpeed;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        UpdateMode();
+    }
     void Update()
     {
         if (Input.GetKey(KeyCode.A))    //Left
@@ -37,7 +40,7 @@ public class SP_CameraController : MonoBehaviour
             if (!mapMode)       //Set to map mode
             {
                 target.transform.position = mapCentre.transform.position;   //Move the target to the centre
-                transform.localPosition = new Vector3(0f, 450f, 0f);
+                transform.localPosition = new Vector3(0f, 75f, 0f);
                 transform.eulerAngles = new Vector3(90, 0, 0);
 
             }
@@ -46,7 +49,7 @@ public class SP_CameraController : MonoBehaviour
                 if (activePlayer != null)
                 {
                     target.transform.position = activePlayer.transform.position;
-                    transform.localPosition = new Vector3(0f, 50f, -50f);
+                    transform.localPosition = new Vector3(8f, 4.3f, 0);
                     transform.LookAt(target.transform.position);
                 }
             }

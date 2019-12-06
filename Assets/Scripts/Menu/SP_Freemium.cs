@@ -17,6 +17,14 @@ public class SP_Freemium : MonoBehaviour
     public GameObject[] greenSkinIcons = new GameObject[6];
     public GameObject[] yellowSkinIcons = new GameObject[6];
 
+    public GameObject[] purchaseButtons = new GameObject[5];
+
+    public GameObject merchantBuy;
+    public GameObject rogueBuy;
+    public GameObject wizardBuy;
+    public GameObject priestBuy;
+    public GameObject archerBuy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +75,12 @@ public class SP_Freemium : MonoBehaviour
 
     public void PurchaseSkin(int skinCode)
     {
-        PlayerPrefs.SetInt(skinCode.ToString(), 1);
+        if (PlayerPrefs.GetInt("Coins") >= 100)
+        {
+            PlayerPrefs.SetInt(skinCode.ToString(), 1);
+            purchaseButtons[skinCode - 1].SetActive(false);
+            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - 100);
+        }
+
     }
 }
