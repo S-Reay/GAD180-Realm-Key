@@ -26,6 +26,7 @@ public class SP_PlayerController : MonoBehaviour
     public GameObject destination;
 
     public GameObject gameManager;
+    public GameObject audioManager;
     public int moves;
     public int keys;
     public bool isStunned = false;
@@ -54,6 +55,7 @@ public class SP_PlayerController : MonoBehaviour
      */
 
     public GameObject rollUI;
+    public GameObject keyModel;
 
     void Start()
     {
@@ -148,6 +150,7 @@ public class SP_PlayerController : MonoBehaviour
             GetComponent<SP_SlerpMovement>().start = previousSpace.transform;
             GetComponent<SP_SlerpMovement>().end = currentSpace.transform;
         }
+        keyModel.SetActive(holdingKey);
 
     }
 
@@ -205,6 +208,7 @@ public class SP_PlayerController : MonoBehaviour
 
     void UseTripleDice()
     {
+        audioManager.GetComponent<SP_AudioManager>().PlaySound(6);
         moves = dice.GetComponent<SP_DiceRoll>().RollTripleDice();
         currentSpace.GetComponent<SP_NodeScript>().isOccupied = false;
         state = 1;
@@ -212,6 +216,7 @@ public class SP_PlayerController : MonoBehaviour
     }
     public void UseRiggedDice(int choice)
     {
+        audioManager.GetComponent<SP_AudioManager>().PlaySound(4);
         moves = dice.GetComponent<SP_DiceRoll>().RollRiggedDice(choice);    //This is silly but whatever lol
         riggedDicePrompt.SetActive(false);
         currentSpace.GetComponent<SP_NodeScript>().isOccupied = false;
@@ -266,6 +271,7 @@ public class SP_PlayerController : MonoBehaviour
     IEnumerator CoMoveDelay(int nextState)
     {
         yield return new WaitForSeconds(1f);
+        CheckSpace();
         state = nextState;
         movePlayerCalled = false;
         if (nextState == -1)
@@ -287,10 +293,13 @@ public class SP_PlayerController : MonoBehaviour
         }
         else if (moves == 1)
         {
+            if (destination.GetComponent<SP_NodeScript>().isOccupied)
+            {
+                //Adjust player so that models don't overlap
+            }
             previousSpace = currentSpace;   //Keeps track of which space the player was just on, used in DetermineDestination()
             currentSpace = destination;
             moves--;
-            CheckSpace();
             currentSpace.GetComponent<SP_NodeScript>().isOccupied = true;
             StartCoroutine(CoMoveDelay(-1)); //ends player's turn when moves run out
         }
@@ -331,6 +340,7 @@ public class SP_PlayerController : MonoBehaviour
     {
         if (currentSpace.GetComponent<SP_NodeScript>().heldKey != null && !holdingKey)
         {
+            audioManager.GetComponent<SP_AudioManager>().PlaySound(1);
             Destroy(currentSpace.GetComponent<SP_NodeScript>().heldKey);
             currentSpace.GetComponent<SP_NodeScript>().heldKey = null;
             holdingKey = true;
@@ -341,6 +351,7 @@ public class SP_PlayerController : MonoBehaviour
             {
                 if (items[i] == 0)                                              //If the player has a free space
                 {
+                    audioManager.GetComponent<SP_AudioManager>().PlaySound(0);
                     items [i] = currentSpace.GetComponent<SP_NodeScript>().heldItem.GetComponent<SP_Item>().itemID;                     //Adds to the first available slot
                     itemSpritesUI[i].sprite = currentSpace.GetComponent<SP_NodeScript>().heldItem.GetComponent<SP_Item>().itemSprite;   //Assigns the correct sprite
                     itemSpritesUI[i].enabled = true;                                                                                    //Enables the item slot image
@@ -353,9 +364,42 @@ public class SP_PlayerController : MonoBehaviour
         else if (team == currentSpace.GetComponent<SP_NodeScript>().team && holdingKey)
         {
             //Key is Captured
+            audioManager.GetComponent<SP_AudioManager>().PlaySound(3);
             holdingKey = false;
             keys++;
             gameManager.GetComponent<SP_GameManager>().UpdatePlayerUI(team, keys);
+
+            if (keys >= 3)
+            {
+                int x = 0;
+                switch (gameObject.name)
+                {
+                    case "Player1":
+                        x = 0;
+                        break;
+                    case "Player2":
+                        x = 1;
+                        break;
+                    case "Player3":
+                        x = 2;
+                        break;
+                    case "Player4":
+                        x = 3;
+                        break;
+                    default:
+                        break;
+                }
+                gameManager.GetComponent<SP_GameManager>().PlayerWins(x);
+            }
+        }
+
+        if (currentSpace.GetComponent<SP_NodeScript>().isOccupied)
+        {
+            //Check if nearest player is holding a key
+            Debug.LogWarning("Attempting to steal");
+            gameManager.GetComponent<SP_GameManager>().StealKey(this.gameObject);
+            //Add key
+            //Remove their key
         }
     }
 }

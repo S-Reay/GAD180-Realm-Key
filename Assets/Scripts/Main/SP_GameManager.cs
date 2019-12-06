@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SP_GameManager : MonoBehaviour
 {
@@ -38,7 +39,17 @@ public class SP_GameManager : MonoBehaviour
     public GameObject P4GreyKey2;
     public GameObject P4GreyKey3;
 
+    public GameObject pauseUI;
+
     public int keySpawnCountdown;
+
+    public GameObject audioManager;
+    bool paused = false;
+
+    public GameObject winUI;
+    public GameObject gameUI;
+    public TextMeshProUGUI winnerText;
+    public TextMeshProUGUI flavourText;
 
     void Start()
     {
@@ -51,6 +62,30 @@ public class SP_GameManager : MonoBehaviour
         P2Stun.text = PlayerPrefs.GetString("P2Name", "Blue");
         P3Stun.text = PlayerPrefs.GetString("P3Name", "Green");
         P4Stun.text = PlayerPrefs.GetString("P4Name", "Yellow");
+
+        winUI.SetActive(false); 
+        gameUI.SetActive(true); 
+
+        if (string.IsNullOrEmpty(P1Name.text))
+        {
+            P1Name.text = "Red";
+            P1Stun.text = "Red";
+        }
+        if (string.IsNullOrEmpty(P2Name.text))
+        {
+            P2Name.text = "Blue";
+            P2Stun.text = "Blue";
+        }
+        if (string.IsNullOrEmpty(P3Name.text))
+        {
+            P3Name.text = "Green";
+            P3Stun.text = "Green";
+        }
+        if (string.IsNullOrEmpty(P4Name.text))
+        {
+            P4Name.text = "Yellow";
+            P4Stun.text = "Yellow";
+        }
 
         switch (PlayerPrefs.GetInt("PlayerAmount"))
         {
@@ -71,7 +106,8 @@ public class SP_GameManager : MonoBehaviour
 
                 break;
             default:
-                Debug.LogError("PlayerPrefs:PlayerAmount Is not within expected range");
+                PlayerPrefs.SetInt("PlayerAmount", 4);
+                Debug.LogError("PlayerPrefs:PlayerAmount Is not within expected range, defaulting to 4 player mode");
                 break;
         }
 
@@ -89,12 +125,14 @@ public class SP_GameManager : MonoBehaviour
 
         keySpawnCountdown = 1;                                                  //all players get 1 move before the first key spawns
 
-
+        audioManager.GetComponent<SP_AudioManager>().PlayBG();
     }
 
     public void NextPlayer()
     {
         Debug.Log("Next player called");
+
+        audioManager.GetComponent<SP_AudioManager>().PlaySound(7);
 
         if (activePlayer != PlayerPrefs.GetInt("PlayerAmount")-1)
         {
@@ -128,16 +166,16 @@ public class SP_GameManager : MonoBehaviour
         switch (activePlayer)
         {
             case 0:
-                activePlayerUI.text = PlayerPrefs.GetString("P1Name") + "'s Turn";
+                activePlayerUI.text = P1Name.text + "'s Turn";
                 break;
             case 1:
-                activePlayerUI.text = PlayerPrefs.GetString("P2Name") + "'s Turn";
+                activePlayerUI.text = P2Name.text + "'s Turn";
                 break;
             case 2:
-                activePlayerUI.text = PlayerPrefs.GetString("P3Name") + "'s Turn";
+                activePlayerUI.text = P3Name.text + "'s Turn";
                 break;
             case 3:
-                activePlayerUI.text = PlayerPrefs.GetString("P4Name") + "'s Turn";
+                activePlayerUI.text = P4Name.text + "'s Turn";
                 break;
             default:
                 break;
@@ -147,6 +185,67 @@ public class SP_GameManager : MonoBehaviour
     void Update()
     {
         DisplayActivePlayerName();
+        if (Input.GetKeyDown(KeyCode.Escape) && !paused)
+        {
+            PauseMenu();
+        }
+    }
+
+    public void StealKey(GameObject thief)
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            if (players[i] != thief)
+            {
+                if (Vector3.Distance(thief.transform.position, players[i].transform.position) < 1)
+                {
+                    audioManager.GetComponent<SP_AudioManager>().PlaySound(2);
+                    players[i].GetComponent<SP_PlayerController>().holdingKey = false;
+                    thief.GetComponent<SP_PlayerController>().holdingKey = true;
+                }
+            }
+        }
+    }
+
+    public void PauseMenu()
+    {
+        pauseUI.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void Unpause()
+    {
+        pauseUI.SetActive(false);
+        Time.timeScale = 1;
+    }
+    public void Quit()
+    {
+        SceneManager.LoadScene("SP_Menu");
+    }
+
+    public void PlayerWins(int playerID)
+    {
+        string winnerName = "";
+        winUI.SetActive(true);
+        gameUI.SetActive(false);
+        switch (playerID)
+        {
+            case 0:
+                winnerName = P1Name.text;
+                break;
+            case 1:
+                winnerName = P2Name.text;
+                break;
+            case 2:
+                winnerName = P3Name.text;
+                break;
+            case 3:
+                winnerName = P4Name.text;
+                break;
+            default:
+                break;
+        }
+        winnerText.text = winnerName + " Wins!";
+        flavourText.text = winnerName + " has retrieved 3 magical keys and shall be crowned as the new King.";
     }
 
     public void UpdatePlayerUI(int player, int keys)
